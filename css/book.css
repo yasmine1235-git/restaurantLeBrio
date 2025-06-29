@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0; /*mlowl transparente w the item decale*/
+        transform: translateY(20px);/*L'élément est initialement décalé de 20 pixels vers le bas.(selon laxe y)*/
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+header li,h1,a,h2,h3,p{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(14, 10, 10, 0.855);
+    font-weight: 500;
+    text-decoration: none;
+}
+header {
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+
+
+/* Dropdown Content Base Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: white; /* clean background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* softer shadow */
+    width: 55px; /* adjust width to suit content */
+    border: 1px solid #ddd; /* lighter border for a subtler look */
+    border-radius: 3px; /* less pronounced border radius */
+    z-index: 1000;
+}
+
+/* Dropdown Link Styles */
+.dropdown-content a {
+    padding: 6px 12px; /* tighter padding */
+    display: block;
+    text-decoration: none;
+    color: black; /* ensuring legibility */
+    font-size: 14px; /* optimal font size for readability */
+    line-height: 1.2; /* reduced line height for less vertical space */
+    transition: background-color 0.2s ease; /* smoother transition */
+}
+
+/* Hover Effects for Links */
+.dropdown-content a:hover {
+    background-color: #f8f8f8; /* lighter hover background for subtlety */
+    color: #505050; /* slightly darker text for contrast */
+}
+
+/* No additional bottom margins or padding */
+.dropdown-content li {
+    margin: 0; /* remove default margins */
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 160px;
+    z-index: 9999; 
+    top: 100%;      
+    left: 0;        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ header  * {
+    opacity: 0; 
+    animation: fadeIn 1s ease forwards;/*forwards yaani baad mayekml leffet terjaa klaada*/
+}
+
+body {
+    background-color: white;
+    margin: 0 auto ;
+}
+
+.bodybook {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(254, 255, 255);
+}
+
+
+header{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+.logo{
+    margin-right: auto;
+
+}
+.nav_menu{
+    list-style: none;
+    z-index: 100;
+}
+.nav_menu li{
+    display: inline-block;
+    padding :20px;
+}
+.nav_menu li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav_menu li a:hover{
+    color: hwb(153 0% 56%); 
+
+    }
+    
+.nav_menu li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.nav_menu li a:hover::after {
+   opacity: 1;
+}
+
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+.logo img{
+    width: 180px;
+    height: auto;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+}
+
+.front,
+.back {
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.9s;
+    border: 2px solid rgba(120, 114, 114, 0.484); 
+    justify-content: center;
+    align-items: flex-start; /* Ensures content starts from the left */
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid rgb(34, 32, 32);
+}
+
+.back {
+    z-index: 0;
+    background-color: white; /* Change back color to white */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+.ktiba {
+    text-align: center; /* Centers the title */
+    margin-bottom: 20px; /* Adds space below the title */
+    margin-top: 30px;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(12, 69, 8);
+}
+
+.elements-flip {
+    font-size: medium;
+    font-style: italic;
+    font-weight: 100;
+    margin-right: 20px;
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+    margin: 0 auto 20px; /* Centers the list, adds space below it */
+    display: flex;
+    flex-direction: column; /* Ensures items are stacked vertically */
+    align-items: flex-start;
+    gap: 15px; /* Adds space between list items */
+}
+
+.front-content .elements-flip {
+    padding-left: 20px; 
+}
+
+.back-content .elements-flip {
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #003325;
+    color: white;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Remove the top margin */
+    padding: 0;
+}
+
+.footer-content {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 600;
+}

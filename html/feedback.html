@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - Le Brio</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\LeBrio\css\style.css"> 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+
+                // Récupération des champs
+                const name = document.getElementById('name');
+                const email = document.getElementById('email');
+                const subject = document.getElementById('subject');
+                const comment = document.getElementById('comment');
+                
+                // Récupération des valeurs
+                const nameValue = name.value.trim();
+                const emailValue = email.value.trim();
+                const subjectValue = subject.value.trim();
+                const commentValue = comment.value.trim();
+                
+                // en cas erreur afficher msg
+                let valid = true;
+                if (nameValue.length < 3 || nameValue.length > 20) {
+                    valid = false;
+                    displayError(name, 'Le nom doit contenir entre 3 et 20 caractères.');
+                } else {
+                    displaySuccess(name);
+                }
+
+    
+
+                // Si le formulaire est valide, soumettre
+                if (valid) {
+                    form.submit();
+                }
+            });
+
+            // Fonction pour afficher l'erreur rouge
+            function displayError(input, message) {
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.textContent = message;
+                input.parentNode.appendChild(errorMessage);
+                input.style.borderColor = 'red';
+            }
+
+            // Fonction pour afficher le succes vert
+            function displaySuccess(input) {
+                input.style.borderColor = 'green';
+            }
+        });
+    </script>
+    
+</head>
+<body>
+    <div class="feedback_form">
+        <h2>Feedback</h2>
+        <form action="#" method="post">
+            
+                <label for="name">Nom*</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="20">
+
+                <p>Aimez-vous notre restaurant ?</p>
+                <label><input type="radio" name="aime_restaurant" value="oui"> Oui</label>
+                <label><input type="radio" name="aime_restaurant" value="non"> Non</label>
+        
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="subject">Sujet*</label>
+                <input type="text" id="subject" name="subject" required>
+                
+                <label for="comment">Commentaire:</label>
+                <textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
+           
+            
+                <br><input type="submit" value="Envoyer" class="order_button"></br><br>
+           
+        </form>
+    </div>
+
+</body>
+</html>

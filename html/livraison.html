@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SECRETS DE LA CUISINE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="C:\xampp\htdocs\LeBrio\css\style.css">
+</head>
+<body>
+    <header>
+        <a href="lebrio.html" class="logo"><img src="c:\Users\msi20\Downloads\Black and White Minimalist Geometric Restaurant Logo (1).png" alt="Le Brio Logo"></a>
+        <nav>
+            <ul class="nav_menu">
+                <li><a href="lerestaurant.html">LE RESTAURANT</a></li>
+                <li><a href="menu.html">LES MENUS & CARTES</a></li>
+                <li><a href="emplacement.html">EMPLACEMENT</a></li>
+                <li><a href="secretscuisine.html">SECRETS DE LA CUISINE</a></li>
+            </ul>
+        </nav>
+        <a href="C:\xampp\htdocs\LeBrio\reservation\reservation.html"><button>RESERVATION</button></a>
+    </header>
+    <section  class="carte">
+        <br><h2><strong>Formulaire de commande de livraison</strong></h2></br>
+        <form action="#" method="POST">
+            <label for="name"><strong>Nom*</strong></label><br>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="20"><br>
+
+                <p><strong>Aimez-vous notre restaurant ?</strong></p>
+                <label><input type="radio" name="aime_restaurant" value="oui"> Oui</label>
+                <label><input type="radio" name="aime_restaurant" value="non"> Non</label>
+
+            <br><label for="email"><strong>Email*</strong></label></br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="address"><strong>Adresse de livraison:</strong></label><br>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="phone"><strong>Téléphone:</strong></label><br>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" required><br>
+
+           
+
+            <h3><strong>Choisissez vos plats préfèrés</strong></h3>
+            <label><input type="checkbox" name="plat" value="Salade verte de saison"> Salade verte de saison</label><br>
+            <label><input type="checkbox" name="plat" value="Tartare de tomates bio"> Tartare de tomates bio</label><br>
+            <label><input type="checkbox" name="plat" value="Poisson du jour pêché durablement"> Poisson du jour pêché durablement</label><br>
+            <label><input type="checkbox" name="plat" value="Risotto aux champignons sauvages"> Risotto aux champignons sauvages</label><br>
+            <label><input type="checkbox" name="plat" value="Burger végétarien aux haricots noirs"> Burger végétarien aux haricots noirs</label><br>
+            <label><input type="checkbox" name="plat" value="Raviolis aux légumes de saison"> Raviolis aux légumes de saison</label><br>
+            <label><input type="checkbox" name="plat" value="Salade de quinoa aux légumes grillés"> Salade de quinoa aux légumes grillés</label><br>
+            <label><input type="checkbox" name="plat" value="Pâtes fraîches aux légumes grillés"> Pâtes fraîches aux légumes grillés</label><br>
+            <label><input type="checkbox" name="plat" value="Carpaccio de betteraves rôties"> Carpaccio de betteraves rôties</label><br>
+            <label><input type="checkbox" name="plat" value="Boulettes de lentilles aux herbes fraîches"> Boulettes de lentilles aux herbes fraîches</label><br>
+            <label><input type="checkbox" name="plat" value="Pizza aux légumes grillés et fromage de chèvre"> Pizza aux légumes grillés et fromage de chèvre</label><br>
+            <label><input type="checkbox" name="plat" value="Salade de lentilles aux légumes croquants"> Salade de lentilles aux légumes croquants</label><br>
+              
+            <label for="allergy"><strong>Allergies:</strong></label><br>
+            <textarea id="allergy" name="allergy" rows="4"></textarea><br>
+
+            <br><input type="submit" value="Valider la commande" class="order_button"></br><br>
+
+        </form>
+    
+</section>
+</body>
+<footer>
+    <div class="footer-content">
+        <h3 class="explorebrio">LE BRIO</h3>
+    </div>
+</footer>
+
+
+</html>
+

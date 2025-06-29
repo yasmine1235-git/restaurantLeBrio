@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation de formulaire</title>
+    <style>
+        input.invalid {
+            border: 2px solid red;
+        }
+
+        input.valid {
+            border: 2px solid green !important; /* Utilisez !important pour s'assurer que les styles sont appliqués */
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulaire</h1>
+    <form id="myForm">
+        <label for="name">Nom:</label>
+        <input type="text" id="name" required>
+        <button type="submit">Soumettre</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
+            
+            const nameInput = document.getElementById('name');
+            const nameValue = nameInput.value.trim();
+
+            if (nameValue.length < 3) {
+                nameInput.classList.remove('valid');
+                nameInput.classList.add('invalid');
+                alert("Le nom doit contenir au moins 3 caractères.");
+            } else {
+                nameInput.classList.remove('invalid');
+                nameInput.classList.add('valid');
+                alert("Le formulaire est valide !");
+                // Vous pouvez soumettre le formulaire ici si nécessaire
+            }
+        });
+    </script>
+</body>
+</html>

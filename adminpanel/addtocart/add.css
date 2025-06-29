@@ -1,0 +1,207 @@
+
+
+a{
+    text-decoration: none;
+}
+
+
+*{
+    margin :0;
+    padding :0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /*mlowl transparente w the item decale*/
+        transform: translateY(20px);/*L'élément est initialement décalé de 20 pixels vers le bas.(selon laxe y)*/
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+ header  * {
+    opacity: 0; 
+    animation: fadeIn 1s ease forwards;/*forwards yaani baad mayekml leffet terjaa klaada*/
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto ;
+}
+
+li,h1,a,h2,h3,p{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(14, 10, 10, 0.855);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+header{
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1000;
+}
+.logo{
+    margin-right: auto;
+
+}
+.logo img{
+    width: 180px;
+    height: auto;
+}
+
+.nav_menu{
+    list-style: none;
+    z-index: 100;
+}
+.nav_menu li{
+    display: inline-block;
+    padding :20px;
+}
+.nav_menu li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.nav_menu li a:hover{
+    color: hwb(153 0% 56%); 
+
+    }
+    
+.nav_menu li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.nav_menu li a:hover::after {
+   opacity: 1;
+}
+button{
+    color: white;
+    background-color: #003325;  
+    padding: 9px 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: all 0.3s ease 0s;
+}
+button:hover{
+    background-color: #00703e; 
+}
+
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+
+
+/* Dropdown Content Base Styles */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: white; /* clean background */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* softer shadow */
+    width: 55px; /* adjust width to suit content */
+    border: 1px solid #ddd; /* lighter border for a subtler look */
+    border-radius: 3px; /* less pronounced border radius */
+    z-index: 1000;
+}
+
+/* Dropdown Link Styles */
+.dropdown-content a {
+    padding: 6px 12px; /* tighter padding */
+    display: block;
+    text-decoration: none;
+    color: black; /* ensuring legibility */
+    font-size: 14px; /* optimal font size for readability */
+    line-height: 1.2; /* reduced line height for less vertical space */
+    transition: background-color 0.2s ease; /* smoother transition */
+}
+
+/* Hover Effects for Links */
+.dropdown-content a:hover {
+    background-color: #f8f8f8; /* lighter hover background for subtlety */
+    color: #505050; /* slightly darker text for contrast */
+}
+
+/* No additional bottom margins or padding */
+.dropdown-content li {
+    margin: 0; /* remove default margins */
+}
+
+
+    /* Custom styling for product cards */
+    .product-item {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .product-item:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-image {
+        object-fit: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 250px; /* Adjust as needed */
+    }
+
+    .product-details {
+        padding: 10px;
+    }
+
+    .product-name {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .product-price {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .quantity-label {
+        font-weight: bold;
+    }
+
+    .pqty {
+        width: 70px; /* Adjust as needed */
+    }
+
+    .addItemBtn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+
+    .addItemBtn:hover {
+        background-color: #0056b3;
+        color: #fff;
+    }

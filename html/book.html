@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' />
+
+    <title>Book</title>
+    <link rel="stylesheet" href="../css/book.css">
+    <script src="../javascript/book.js" defer></script>
+    <script src="https://kit.fontawesome.com/d7e7bfa2d1.js" crossorigin="anonymous"></script>
+    <audio id="flipSound" src="../html/turn2.mp3"></audio>
+</head>
+<body>
+    <header>
+        <a href="lebrio.html" class="logo"><img src="../images/logo.png" alt="Le Brio Logo"></a>
+        <nav>
+            <ul class="nav_menu">
+                <li><a href="lebrio.html">ACCUEIL</a></li>
+                <li><a href="lerestaurant.html">EVENTS</a></li>
+                <li class="dropdown">
+                    <a href="#" tabindex="0">LES MENUS & CARTES</a>
+                    <ul class="dropdown-content">
+                        <li><a href="../adminpanel/addtocart/index.php">Commander</a></li>
+                        <li><a href="book.html">Carte</a></li>
+                    </ul>
+                </li>
+                <li><a href="emplacement.html">EMPLACEMENT</a></li>
+                <li><a href="secretscuisine.html">SECRETS DE LA CUISINE</a></li>
+                <li>
+            </li>
+            </ul>
+        </nav>
+    </header>
+<div class="bodybook">
+    <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+
+
+    <!-- Book -->
+    <div id="book" class="book">
+        <!-- Paper 1 -->
+        <div id="p1" class="paper">
+            <div class="front">
+                <div id="f1" class="front-content">
+                    <h1 class="ktiba">Aperitifs</h1>
+                    <ul class="elements-flip">
+                        <li>Tartare de saumon sur carpaccio de noix</li>
+                        <li>Brick croustillant revisité</li>
+                        <li>Salade de lentilles aux légumes croquants</li>
+                        <li>Salade tomates - mozzarella revisitée</li>
+                        <li>Salade de poulpe</li>
+                        <li>Salade de cervelas sauce moutarde</li>
+                        <li>Tartelettes caramélisées tomates cerises-mozzarella</li>
+                        <li>Créme de betteraves</li>
+                        <li>Soupe épicée de poireaux au chorizo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b1" class="back-content">
+                    <h1 class="ktiba">Plats</h1>
+                    <ul class="elements-flip">
+                        <li>Poisson du jour pêché durablement 63dt</li>
+                        <li>Carpaccio de betteraves rôties 28dt</li>
+                        <li>Raviolis aux légumes de saison 49dt</li>
+                        <li>Pâtes fraîches aux légumes grillés 52dt</li>
+                        <li>Pizza aux légumes grillés et fromage de chèvre 78dt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 2 -->
+        <div id="p2" class="paper">
+            <div class="front">
+                <div id="f2" class="front-content">
+                    <h1 class="ktiba">Cuisine tunisienne : special</h1>
+                    <ul class="elements-flip">
+                        <li>Chorba tunisienne</li>
+                        <li>Brick à la viande hachée</li>
+                        <li>Couscous traditionnel aux légumes.</li>
+                        <li>Tajine de poulet aux épices.</li>
+                        <li>Madfouna.</li>
+                        <li>Charmoula du sfax</li>
+                        <li>Pâtes à la tunisienne.</li>
+                        <li>Ojja tunisienne.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b2" class="back-content">
+                    <h1 class="ktiba">Tapas</h1>
+                    <ul class="elements-flip">
+                    <li>boulettes de viande hachée.</li>
+                    <li> calmars frits.</li>
+                    <li>calmars marinés.</li>
+                    <li>Totilla de pommes de terre</li>
+                    <li>Planche de fromages</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Paper 3 -->
+        <div id="p3" class="paper">
+            <div class="front">
+                <div id="f3" class="front-content">
+                    <h1 class="ktiba">Desserts</h1>
+                    <ul class="elements-flip">
+                    <li>Tiramisu</li>
+                    <li>Cheesecake</li>
+                    <li>Fondant au chocolat</li>
+                    <li>cake vanille</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="back">
+                <div id="b3" class="back-content">
+                    <h1 class="ktiba">Boissons</h1>
+                    <ul class="elements-flip">
+                    <li>Soda</li>
+                    <li>Jus d'orange frais </li>
+                    <li>Pina Colada</li>
+                    <li>Mojito</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+</div>
+</body>
+<footer>
+    <div class="footer-content">
+        <h3 class="explorebrio">LE BRIO</h3>
+    </div>
+</footer>
+</html>

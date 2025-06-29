@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Inscription</title>
+    <script src="exemple.js" defer></script>
+    <!-- defer permet de charger le script après le chargement de la page -->
+    <style>
+        .error-message {
+            color: red;
+        }
+        .success-message {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-form">
+        <div class="wrapper-form">
+            <h2>Formulaire d'Inscription</h2>
+        </div>
+        <form id="inscriptionForm" class="form">
+            <div class="form-control">
+                <label for="nom">Nom</label>
+                <input type="text" id="nom" placeholder="Entrer le Nom">
+                <span id="nomError" class="error-message"></span>
+            </div>
+            <div class="form-control">
+                <label for="prenom">Prénom</label>
+                <input type="text" id="prenom" placeholder="Entrer le Prénom">
+                <span id="prenomError" class="error-message"></span>
+            </div>
+            <div class="form-control">
+                <label for="telephone">Numéro de Téléphone</label>
+                <input type="text" id="telephone" placeholder="Entrer le numéro de téléphone">
+                <span id="telephoneError" class="error-message"></span>
+            </div>
+            <div class="form-control">
+                <label for="dateNaissance">Date de Naissance</label>
+                <input type="date" id="dateNaissance">
+                <span id="dateNaissanceError" class="error-message"></span>
+            </div>
+            <div class="form-control">
+                <label for="password">Mot de Passe</label>
+                <input type="password" id="password" placeholder="Entrer le Mot de Passe">
+                <span id="passwordError" class="error-message"></span>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Entrer l'email">
+                <span id="emailMessage"></span>
+            </div>
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
